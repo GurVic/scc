@@ -1,0 +1,2 @@
+# scc
+Spring Cloud Config
