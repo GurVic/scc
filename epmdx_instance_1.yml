@@ -1,5 +1,5 @@
 applications:
-- name: appNewVersion
+- name: app
   versions:
-  - name: appNew.3.0.1
+  - name: 4.0.1
     number: 1
