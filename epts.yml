@@ -1,0 +1,42 @@
+applications:
+- name: appGithub
+  time-series:
+  - name: tsHumidity
+    value-field: humidity
+    tag-fields: temperature, latitude, longitude
+  - name: tsTemperature
+    value-field: temperature
+  versions:
+  - name: app1.v.1
+    number: 1
+    timestamp:
+      path: $.t
+      format: iso8601
+      fallback-strategy: fail
+    preprocessing:
+      extraction:
+        extract-all: true
+        fields:
+        - name: temperature
+          path: $.tmp
+        - name: latitude
+          path: $.lat
+        - name: longitude
+          path: $.lon
+        - name: humidity
+          path: $.hum
+  - name: app1.v.2
+    number: 2
+  - name: app1.v.3
+    number: 3
+    preprocessing:
+      extraction:
+        fields:
+        - name: temperature
+          path: $.tmpo
+        - name: latitude
+          path: $.la
+        - name: longitude
+          path: $.lo
+        - name: humidity
+          path: $.h
