@@ -1,5 +1,5 @@
 applications:
-- name: appGithub
+- name: appGithubNew
   time-series:
   - name: tsHumidity
     value-field: humidity
